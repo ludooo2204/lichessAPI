@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ludo</title>
+    <style>
+        body {
+            font-size:50px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // fetch("https://lichess.org/api/games/user/{ludo2204}").then(txt=>console.log(txt))
+        const personalToken = '4PFTfXRRYQozc0RL';
+
+// fetch('https://lichess.org/api/account', {
+//     headers: {
+//       'Authorization': 'Bearer ' + personalToken
+//     }
+//   })
+//   .then(res => res.json())
+//   .then(console.log);
+
+  
+
+fetch('https://lichess.org/api/games/user/ludo2204?&opening=true&evals=true ',
+ {
+    headers: {
+      'Authorization': 'Bearer ' + personalToken
+    }
+  })
+  .then(res => res.text())
+  .then(console.log);
+// fetch('https://lichess.org/api/games/user/ludo2204/',
+//  {
+//     headers: {
+//       'Authorization': 'Bearer ' + personalToken
+//     }
+//   })
+//   .then(res => res.text())
+//   .then(console.log);
+
+
+    </script>
+    </script>
+</body>
+</html>
